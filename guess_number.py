@@ -6,6 +6,12 @@ while lives > 0:
 
    if guess == number:
       print("Congratulations! You guessed the right number.")
+   if guess > number:
+      print("Sorry, your guess was too high, the number was", number)
+      lives -= 1
+   elif guess < number:
+      print("Sorry, your guess was too low, the number was", number)
+      lives -= 1
    else:
       print(f"Sorry! The number was {number}.")
       lives -= 1
